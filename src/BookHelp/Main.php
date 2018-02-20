@@ -39,7 +39,7 @@ class Main extends PluginBase implements Listener {
     $conig = $this-getConfig();
     switch($command[0]) {
       case "/help":
-        $book = Item::get(Item::WRITTEN_BOOK, 0, 1);
+        $book = Item::get(WRITTEN_BOOK, 0, 1);
         if($book instanceof WrittenBook) {
           $book->setTitle($config->get("title"));
           $book->setPageText(0, $config->get("text-1"));
